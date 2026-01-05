@@ -1,15 +1,16 @@
 / {
     compatible = "zmk,wired-split";
-    device = <&pro_micro_serial>;
 
     chosen {
         zmk,display = &oled;
     };
 };
 
-&oled {
-    compatible = "solomon,ssd1306fb-i2c";
-    reg = <0x3c>;
-    width = <128>;
-    height = <32>;
+/ {
+    oled: oled@3c {
+        compatible = "solomon,ssd1306fb-i2c";
+        reg = <0x3c>;
+        width = <128>;
+        height = <32>;
+    };
 };
