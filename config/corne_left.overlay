@@ -5,12 +5,3 @@
         zmk,display = &oled;
     };
 };
-
-/ {
-    oled: oled@3c {
-        compatible = "solomon,ssd1306fb-i2c";
-        reg = <0x3c>;
-        width = <128>;
-        height = <32>;
-    };
-};
